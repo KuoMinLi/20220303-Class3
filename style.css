@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+  
+}
+
+body {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: navy
+}
+
+
+
+
+.container {
+
+    max-width: 1440px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+
+.item1, .item2, .item3 {
+    width: 370px;
+    margin: 15px;
+    padding:2px;
+    text-align: center;
+    background-color: antiquewhite;
+  
+}
+
+
+.pic1 {
+    background: url(https://picsum.photos/370?random=1)  center;
+    height: 370px;
+
+}
+
+.pic2 {
+    background: url(https://picsum.photos/370?random=2)  center;
+    height: 370px;
+ 
+}
+.pic3 {
+    background: url(https://picsum.photos/370?random=3)  center;
+    height: 370px;
+}
+
+h1::before{
+    display: block;
+    content: '';
+    border-top: 60px solid transparent;
+    border-left: 185px solid antiquewhite;
+    border-right: 185px solid antiquewhite;
+    border-bottom: 30px solid antiquewhite;
+    transform: translateY(-100%);
+    margin-bottom: -90px;
+}
+
+p {
+    line-height: 2rem;
+    
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.item1:hover, .item2:hover, .item3:hover{  
+    transform: translateY(-50px);
+    transition: .5s;
+}
+
+.item1:hover h1::before, 
+.item2:hover h1::before, 
+.item3:hover h1::before{  
+    border-left: 185px solid tomato;
+    border-right: 185px solid tomato;
+    border-bottom: 30px solid tomato;
+    transition: 0.25s;
+}
+
+
+.item1:hover h1, .item1:hover p,
+.item2:hover h1, .item2:hover p,
+.item3:hover h1, .item3:hover p{
+    background-color: tomato;
+    color: white;
+    transition: 0.25s;
+    border-bottom: 1px solid white;
+}
